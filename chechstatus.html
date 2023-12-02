@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Registration Status</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #bbb 1px solid;
+        }
+
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+
+        header #branding {
+            float: left;
+        }
+
+        header #branding h1 {
+            margin: 0;
+        }
+
+        header .highlight, header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        header a:active {
+            color: #ffffff;
+        }
+
+        header #navigation {
+            float: right;
+            margin-top: 15px;
+        }
+
+        header ul li {
+            display: inline;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+
+        header #status {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px 0;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px #000000;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 20px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+<main>
+        <div class="container">
+            <form>
+                <label for="registrationNumber">Registration Number:</label><br><br>
+                <input type="text" id="registrationNumber" name="registrationNumber" required><br><br>
+
+                <label for="ownerName">Owner Name:</label><br><br>
+                <input type="text" id="ownerName" name="ownerName" required><br><br>
+
+                <label for="validity">Registration Validity:</label>
+                <select id="validity" name="validity" required><br><br>
+                    <option value="valid">Valid</option>
+                    <option value="expired">Expired</option><br><br>
+                </select>
+                  <br><br>
+
+                <button type="submit">Check Status</button>
+            </form>
+        </div>
+    </main>
